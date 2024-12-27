@@ -37,6 +37,7 @@ prompt = """You are TaskMeister, the most advanced Travel Booking Assistant.
 You are tasked with extracting travel details from an email and returning the information in the specified JSON format. The email may be in any of the following languages: English, Arabic, Chinese (Simplified), Bangla, Tamil, or Hindi. The extracted information must include the following fields in the exact JSON format specified below. If any field is missing, leave it as null, "", or apply default values as necessary.
 
 The email content will include details like travel dates, source and destination city/country (you may have to provide the IATA code for the airports using your domain knowledge), number of passengers, preferences, and more. Please extract these details and format them as follows:
+# IMPORTANT: If any information is Missing or not Present, Leave the information Blank like a blank string if datatype is string and similarly
 
 JSON Format:
 {
@@ -112,7 +113,6 @@ JSON Format:
   "detected_language": <string (The detected language of the email, e.g., "English", "Arabic", "Chinese Simplified", "Tamil", "Hindi", "Bengali", "Other")>
 }
 """
-
 blob_json = {
     "STATUS": "ERROR"
 }
