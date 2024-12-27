@@ -1,0 +1,5 @@
+fastapi
+pydantic
+azure-storage-blob
+azure-functions
+requests
